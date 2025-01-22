@@ -12,6 +12,35 @@
         margin-bottom: 20px;
         margin-top: 10px;
     }
+    .map-acordion {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: center;
+        margin-top: 1rem;
+        .map-frame-wrapper {
+            width: 50%;
+            position: relative;
+            overflow: hidden;
+            height: 400px;
+        }
+        .map-frame {
+            overflow: hidden !important;
+            position: absolute;
+            top: -250px;
+            left: 0;
+            width: 100%;
+            height: calc(400px + 400px);
+            @media screen and (max-width: 1315px) {
+                top: -540px;
+                height: 1500px;
+            }
+        }
+        iframe {
+            overflow: hidden;
+
+        }
+    }
 }
 
 .initiatives-grid {
@@ -28,7 +57,6 @@
     transition: box-shadow 0.3s ease;
     border: none;
     border-radius: 8px;
-
     &:hover {
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     }
@@ -61,7 +89,6 @@
     }
 }
 
-
 .accordion-content {
     display: none;
     background-color: var(--background-color);
@@ -78,9 +105,10 @@
 .accordion-content {
     transition: max-height 0.3s ease, padding 0.3s ease;
     max-height: 0;
-    overflow: hidden;
 }
 
 .accordion.active .accordion-content {
-    max-height: 300px;
+    height: 280px;
+    max-height: 280px;
+    overflow: auto;
 }

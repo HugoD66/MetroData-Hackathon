@@ -1,7 +1,10 @@
 export function setupAccordions() {
     const accordions = document.querySelectorAll('.accordion');
+
     accordions.forEach(accordion => {
         const header = accordion.querySelector('.accordion-header');
+        if (!header) return;
+
         header.addEventListener('click', () => {
             const isActive = accordion.classList.contains('active');
 

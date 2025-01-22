@@ -25,8 +25,9 @@ body {
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--background-color);
+  scrollbar-width: thin;
+  scrollbar-color: var(--blue-one) var(--light-back);
 }
-
 
 html {
   scroll-behavior: smooth;
@@ -50,7 +51,6 @@ section h2 {
   margin-bottom: 2rem;
   text-align: center;
 }
-
 
 .divider {
   width: 60%;
@@ -89,4 +89,23 @@ section h2 {
     .half-chart {
       width: 40%;
     }
+}
+
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-back);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue-one);
+  border-radius: 6px;
+  border: 3px solid var(--light-back);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--button-back);
 }

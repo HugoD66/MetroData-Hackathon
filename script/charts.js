@@ -1,5 +1,4 @@
 export function setupCharts() {
-  // Configuration du graphique des types de travail
   const workTypesOptions = {
     series: [{
       name: 'Évolution',
@@ -21,7 +20,6 @@ export function setupCharts() {
     }
   };
 
-  // Configuration du graphique des métiers émergents
   const emergingJobsOptions = {
     series: [{
       data: [400, 430, 448, 470, 540, 580, 690]
@@ -39,7 +37,6 @@ export function setupCharts() {
     }
   };
 
-  // Configuration du graphique de répartition géographique
   const geoDistributionOptions = {
     series: [44, 55, 13, 43, 22],
     chart: {
@@ -53,7 +50,6 @@ export function setupCharts() {
     }
   };
 
-  // Configuration du graphique d'adéquation compétences
   const skillsMatchOptions = {
     series: [{
       name: 'Offres',
@@ -76,13 +72,11 @@ export function setupCharts() {
     }
   };
 
-  // Création des graphiques
   const workTypesChart = new ApexCharts(document.querySelector("#workTypesChart"), workTypesOptions);
   const emergingJobsChart = new ApexCharts(document.querySelector("#emergingJobsChart"), emergingJobsOptions);
   const geoDistributionChart = new ApexCharts(document.querySelector("#geoDistributionChart"), geoDistributionOptions);
   const skillsMatchChart = new ApexCharts(document.querySelector("#skillsMatchChart"), skillsMatchOptions);
 
-  // Affichage des graphiques
   workTypesChart.render();
   emergingJobsChart.render();
   geoDistributionChart.render();
