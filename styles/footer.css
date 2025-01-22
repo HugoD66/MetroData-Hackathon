@@ -1,0 +1,27 @@
+footer {
+    background: linear-gradient(90deg, var(--green-two), var(--blue-one));
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    .brd-logo-footer {
+        height: 120px;
+        width: 120px;
+    }
+    .ynov-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .ynov-logo {
+            height: 100px;
+            width: 100px;
+        }
+    }
+    p {
+        color: var(--light-back)
+    }
+
+
+}

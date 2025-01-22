@@ -1,0 +1,56 @@
+
+header {
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(90deg, var(--green-two), var(--blue-one));
+}
+
+header h1 {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 0.5rem;
+}
+
+header .baseline {
+    color: black;
+    font-size: 1.1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+nav li {
+    background-color: var(--light-back);
+    border-radius: 10px;
+    padding: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: transparent;
+    font-weight: 500;
+    cursor: pointer;
+    a {
+        color: var(--blue-one);
+        text-decoration: none;
+    }
+}
+
+nav li:hover {
+    background-color: transparent;
+    a {
+        color: var(--light-back);
+    }
+}
+
+.brd-logo {
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    left: 50px;
+}

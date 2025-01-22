@@ -1,0 +1,54 @@
+.indicators-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.indicator-card {
+    background: var(--card-background);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.indicator-card h3 {
+    color: var(--dark-blue);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+#trends {
+    .custom-chart {
+        text-align: center;
+        width: 80%;
+        margin: auto;
+    }
+}
+
+.full-width {
+    width: 80%;
+    margin: auto;
+}
+
+
+.chart-bloc {
+    width: 100%;
+    margin: auto;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 600px;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    h3 {
+        align-self: start;
+        margin-left: 5vw;
+        color: var(--dark-blue);
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Observatoire des Transitions de l'Emploi</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="./picture/brd-without-bg.png" alt="Bordeaux métropole" class="brd-logo">
+      <h1>Observatoire des Transitions de l'Emploi</h1>
+      <p class="baseline">Analyser et visualiser les mutations économiques et sociales du marché de l'emploi à Bordeaux</p>
+      <nav>
+        <ul>
+          <li><a href="#trends">Tendances actuelles</a></li>
+          <li><a href="#jobs">Nouveaux métiers</a></li>
+          <li><a href="#gaps">Écarts offre/demande</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="accueil">
+        <div class="accueil-content">
+          <div class="accueil-text">
+            <h2>Comprendre l'Emploi de Demain</h2>
+            <p>85% des emplois de 2030 n'existent pas encore. Explorez avec nous les mutations du marché du travail à Bordeaux et anticipez les compétences de demain.</p>
+            <a href="#trends" class="accueil-button">Découvrir</a>
+          </div>
+          <div class="accueil-image">
+            <img src="./picture/home-picture.webp" alt="Transition écologique et technologique de l'emploi">
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <section id="trends">
+        <h2>Les tendances du marché de l'emploi</h2>
+        <p class="section-intro">
+          Le marché du travail connaît des transformations majeures avec l'essor de l'auto-entrepreneuriat, 
+          du télétravail et des plateformes numériques. Notre observatoire analyse ces évolutions pour 
+          anticiper les besoins futurs.
+        </p>
+        <div class="indicators-grid">
+          <!--<div class="indicator-card">
+            <button class="info-button" data-modal="workTypesModal">i</button>
+            <h3>Évolution des Formes d'Emploi</h3>
+            <div id="workTypesChart"></div>
+          </div>-->
+
+          <div class="indicator-card">
+            <button class="info-button" data-modal="geoModal">i</button>
+            <h3>Répartition Géographique</h3>
+            <div id="geoDistributionChart"></div>
+          </div>
+
+          <iframe src="https://statistiques.pole-emploi.org/bmo/geo?embed=1&fa=75&fb=33&gc=7532&le=0&nc=0&pp=2024&ss=1" width="550" height="400"></iframe>
+
+<!--
+
+          <div class="indicator-card">
+            <button class="info-button" data-modal="geoModal">i</button>
+            <h3>Répartition Géographique</h3>
+            <div id="geoDistributionChart"></div>
+          </div>
+-->
+
+
+        </div>
+        <div class="indicator-card custom-chart">
+          <button class="info-button" data-modal="workTypesModal">i</button>
+          <h3>Évolution des Formes d'Emploi</h3>
+          <iframe src="https://open.urssaf.fr/chart/embed/?dataChart=eyJxdWVyaWVzIjpbeyJjaGFydHMiOlt7InR5cGUiOiJsaW5lIiwiZnVuYyI6IlNVTSIsInlBeGlzIjoiaW1tYXRyaWN1bGF0aW9ucyIsInNjaWVudGlmaWNEaXNwbGF5Ijp0cnVlLCJjb2xvciI6IiMyMkMxMTkiLCJzY2FsZSI6ImxpbmVhciIsImRpc3BsYXlVbml0cyI6ZmFsc2UsInlMYWJlbE92ZXJyaWRlIjoiIiwiY3VtdWxhdGl2ZSI6ZmFsc2UsIm11bHRpcGxpZXIiOiIiLCJ5UmFuZ2VNaW4iOiIwIiwiZGlzcGxheVZhbHVlcyI6ZmFsc2UsInBvc2l0aW9uIjoiY2VudGVyIiwieVJhbmdlTWF4IjoiMjUwMDAifSx7ImFsaWduTW9udGgiOnRydWUsInR5cGUiOiJjb2x1bW4iLCJmdW5jIjoiU1VNIiwieUF4aXMiOiJjaGlmZnJlc19kX2FmZmFpcmVzIiwic2NpZW50aWZpY0Rpc3BsYXkiOnRydWUsImNvbG9yIjoiI0ZGQ0MwMCJ9LHsiYWxpZ25Nb250aCI6dHJ1ZSwidHlwZSI6ImxpbmUiLCJmdW5jIjoiU1VNIiwieUF4aXMiOiJyYWRpYXRpb25zIiwic2NpZW50aWZpY0Rpc3BsYXkiOnRydWUsImNvbG9yIjoiI0U4MkYwQyIsInlSYW5nZU1pbiI6IjAiLCJ5UmFuZ2VNYXgiOiIyNTAwMCIsInlMYWJlbE92ZXJyaWRlIjoiIn1dLCJ4QXhpcyI6ImFubmVlIiwibWF4cG9pbnRzIjpudWxsLCJ0aW1lc2NhbGUiOiJ5ZWFyIiwic29ydCI6IiIsImNvbmZpZyI6eyJkYXRhc2V0IjoiYXV0by1lbnRyZXByZW5ldXJzLXBhci1kZXBhcnRlbWVudCIsIm9wdGlvbnMiOnsicmVmaW5lLmRlcGFydGVtZW50IjoiR2lyb25kZSJ9fSwic2VyaWVzQnJlYWtkb3duIjoiIiwic2VyaWVzQnJlYWtkb3duVGltZXNjYWxlIjoiIn1dLCJkaXNwbGF5TGVnZW5kIjp0cnVlLCJhbGlnbk1vbnRoIjp0cnVlLCJzaW5nbGVBeGlzIjpmYWxzZSwidGltZXNjYWxlIjoieWVhciJ9&static=false&datasetcard=false" width="90%" height="400" frameborder="0"></iframe>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <section id="jobs">
+        <div class="indicators-grid half-chart">
+          <div class="indicator-card">
+            <h3>Métiers en Forte Croissance</h3>
+            <div id="emergingJobsChart"></div>
+          </div>
+        </div>
+
+        <div class="jobs-content">
+          <h2>Les nouveaux métiers et compétences émergents</h2>
+          <p class="jobs-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <section id="gaps">
+        <h2>Adéquation entre offre et demande d'emploi</h2>
+        <div class="indicator-card full-width">
+          <h3>Analyse des Écarts par Secteur</h3>
+          <div id="skillsMatchChart"></div>
+        </div>
+
+        <div class="local-initiatives">
+          <h3>Initiatives Locales</h3>
+          <div class="divider"></div>
+
+          <div class="initiatives-grid">
+
+            <div class="initiative-card accordion">
+              <button class="accordion-header">
+                <img src="./picture/initiaive-locale-removebg-preview.png" alt="Bordeaux métropole">
+                Formation Numérique</button>
+              <div class="accordion-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </div>
+
+            <div class="initiative-card accordion">
+              <button class="accordion-header">
+                <img src="./picture/accompagnement-removebg-preview.png" alt="Bordeaux métropole">
+              Accompagnement</button>
+              <div class="accordion-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Modales -->
+      <div class="modal" id="workTypesModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+          <button class="modal-close">&times;</button>
+          <div class="modal-section">
+            <h3>Les chiffres</h3>
+            <p>Les données présentées dans ce graphique sont issues d'une analyse approfondie des tendances du marché du travail sur la période 2020-2024. Nous avons collecté ces informations auprès de différentes sources officielles.</p>
+          </div>
+          <div class="modal-section">
+            <h3>Pourquoi</h3>
+            <p>L'évolution des formes de travail est un indicateur clé pour comprendre les transformations du marché de l'emploi. Cette analyse nous permet d'anticiper les besoins futurs et d'adapter les formations en conséquence.</p>
+          </div>
+          <div class="modal-section">
+            <h3>Méthodologie</h3>
+            <p>Les données sont mises à jour trimestriellement et validées par un comité d'experts. Nous utilisons des méthodes statistiques avancées pour garantir la fiabilité des projections.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="geoModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+          <button class="modal-close">&times;</button>
+          <div class="modal-section">
+            <h3>Les chiffres</h3>
+            <p>La répartition géographique est basée sur les données collectées auprès des entreprises et des organismes publics de la région bordelaise au cours des 12 derniers mois.</p>
+          </div>
+          <div class="modal-section">
+            <h3>Pourquoi</h3>
+            <p>Comprendre la distribution géographique des emplois permet d'identifier les zones en développement et d'optimiser les politiques d'aménagement du territoire.</p>
+          </div>
+          <div class="modal-section">
+            <h3>Méthodologie</h3>
+            <p>Les données sont agrégées par zones géographiques définies en collaboration avec les acteurs locaux. La mise à jour est effectuée mensuellement.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="ynov-content">
+        <img src="./picture/ynov.webp" alt="Logo de l'école d'ynov" class="ynov-logo">
+        <p>Projet proposé par Ynov-Bordeaux</p>
+      </div>
+      <p class="metrodata-content">
+        Destiné à la présentation METRODATA
+      </p>
+      <img src="./picture/brd-without-bg.png" alt="Bordeaux métropole" class="brd-logo-footer">
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
