@@ -111,6 +111,59 @@ export function setupCharts() {
     }
   };
 
+  const mySwitch = document.getElementById("mySwitch");
+  mySwitch.addEventListener("input", function() {
+    const checked = this.checked;
+    updateChart2(checked) // Get the state of the checkbox
+  });
+
+  function updateChart2(checked) {
+    if (checked===true) {
+      columnChartEmploys.updateSeries([
+        {
+          name: "2018",
+          data: [8249, 4102, 7498]
+        },
+        {
+          name: "2023",
+          data: [8501, 5446, 5410]
+        }
+      ]);
+      columnChartEmploys.updateOptions({
+        xaxis: {
+          categories: [
+            "ACTIVITÉS JURIDIQUES, COMPTABLES",
+            "CONSTRUCTION",
+            "ENSEIGNEMENT"
+          ]
+        }
+      });
+    } else {
+      columnChartEmploys.updateSeries([
+        {
+          name: "2018",
+          data: [50190, 12780, 11720, 9930, 8220]
+        },
+        {
+          name: "2023",
+          data: [62670, 16980, 9620, 12250, 8470]
+        }
+      ]);
+      columnChartEmploys.updateOptions({
+        xaxis: {
+          categories: [
+            "ACTIVITÉS DE SERVICES",
+            "HÉBERGEMENT MÉDICO-SOCIAL",
+            "COMMERCE ET AUTOMOBILES",
+            "HÉBERGEMENT ET RESTAURATION",
+            "ACTIVITÉS JURIDIQUES"
+          ]
+        }
+      });
+    }
+  }
+  
+
   const columnChartEmploysOptions = {
     series: [
       {
@@ -174,7 +227,7 @@ export function setupCharts() {
       }
     },
     title: {
-      text: "Top 5 des secteurs avec le plus d'offres d'emploi en 2018 et leur évolution en 2023",
+      text: "Top des secteurs avec le plus d'offres d'emploi en 2018 et leur évolution en 2023",
       align: "center"
     }
   };
