@@ -46,22 +46,29 @@
         <div class="indicators-grid">
           <div class="indicator-card">
             <button class="info-button" data-modal="workTypesModal">i</button>
-            <h3>Évolution des Formes d'Emploi</h3>
-            <div id="workTypesChart"></div>
+            <h3>Répartition des entreprise actives par secteur</h3>
+            <div id="enterpriseRepartitionToulouse"></div>
           </div>
 
           <div class="indicator-card">
             <button class="info-button" data-modal="geoModal">i</button>
-            <h3>Répartition Géographique</h3>
-            <div id="geoDistributionChart"></div>
+            <h3>Répartition des entreprise actives par secteur</h3>
+            <div id="enterpriseRepartitionBordeaux"></div>
           </div>
 
         </div>
+
         <div class="indicator-card custom-chart">
+          <button class="info-button" data-modal="workTypesModal">i</button>
+          <!--<h3>Évolution des Formes d'Emploi</h3>-->
+          <div id="columnChartEmploys"></div>
+        </div>
+
+       <!-- <div class="indicator-card custom-chart">
           <button class="info-button" data-modal="workTypesModal">i</button>
           <h3>Évolution des Formes d'Emploi</h3>
           <iframe src="https://open.urssaf.fr/chart/embed/?dataChart=eyJxdWVyaWVzIjpbeyJjaGFydHMiOlt7InR5cGUiOiJsaW5lIiwiZnVuYyI6IlNVTSIsInlBeGlzIjoiaW1tYXRyaWN1bGF0aW9ucyIsInNjaWVudGlmaWNEaXNwbGF5Ijp0cnVlLCJjb2xvciI6IiMyMkMxMTkiLCJzY2FsZSI6ImxpbmVhciIsImRpc3BsYXlVbml0cyI6ZmFsc2UsInlMYWJlbE92ZXJyaWRlIjoiIiwiY3VtdWxhdGl2ZSI6ZmFsc2UsIm11bHRpcGxpZXIiOiIiLCJ5UmFuZ2VNaW4iOiIwIiwiZGlzcGxheVZhbHVlcyI6ZmFsc2UsInBvc2l0aW9uIjoiY2VudGVyIiwieVJhbmdlTWF4IjoiMjUwMDAifSx7ImFsaWduTW9udGgiOnRydWUsInR5cGUiOiJjb2x1bW4iLCJmdW5jIjoiU1VNIiwieUF4aXMiOiJjaGlmZnJlc19kX2FmZmFpcmVzIiwic2NpZW50aWZpY0Rpc3BsYXkiOnRydWUsImNvbG9yIjoiI0ZGQ0MwMCJ9LHsiYWxpZ25Nb250aCI6dHJ1ZSwidHlwZSI6ImxpbmUiLCJmdW5jIjoiU1VNIiwieUF4aXMiOiJyYWRpYXRpb25zIiwic2NpZW50aWZpY0Rpc3BsYXkiOnRydWUsImNvbG9yIjoiI0U4MkYwQyIsInlSYW5nZU1pbiI6IjAiLCJ5UmFuZ2VNYXgiOiIyNTAwMCIsInlMYWJlbE92ZXJyaWRlIjoiIn1dLCJ4QXhpcyI6ImFubmVlIiwibWF4cG9pbnRzIjpudWxsLCJ0aW1lc2NhbGUiOiJ5ZWFyIiwic29ydCI6IiIsImNvbmZpZyI6eyJkYXRhc2V0IjoiYXV0by1lbnRyZXByZW5ldXJzLXBhci1kZXBhcnRlbWVudCIsIm9wdGlvbnMiOnsicmVmaW5lLmRlcGFydGVtZW50IjoiR2lyb25kZSJ9fSwic2VyaWVzQnJlYWtkb3duIjoiIiwic2VyaWVzQnJlYWtkb3duVGltZXNjYWxlIjoiIn1dLCJkaXNwbGF5TGVnZW5kIjp0cnVlLCJhbGlnbk1vbnRoIjp0cnVlLCJzaW5nbGVBeGlzIjpmYWxzZSwidGltZXNjYWxlIjoieWVhciJ9&static=false&datasetcard=false" width="90%" height="400" frameborder="0"></iframe>
-        </div>
+        </div>-->
       </section>
 
       <div class="divider"></div>
@@ -70,13 +77,12 @@
         <div class="indicators-grid half-chart">
           <div class="indicator-card">
             <button class="info-button" data-modal="jobsModal">i</button>
-            <h3>Métiers en Forte Croissance</h3>
-            <div id="emergingJobsChart"></div>
+            <div id="professionByRepartitions"></div>
           </div>
         </div>
 
         <div class="jobs-content">
-          <h2>Les nouveaux métiers et compétences émergents</h2>
+          <h2>Répartition des types de contrats par profession</h2>
           <p class="jobs-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
