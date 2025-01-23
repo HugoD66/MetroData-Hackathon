@@ -8,19 +8,27 @@
   </head>
   <body>
     <header>
-      <img src="pictures/brd-without-bg.png" alt="Bordeaux métropole" class="brd-logo">
-      <h1>Observatoire des Transitions de l'Emploi</h1>
-      <p class="baseline">Analyser et visualiser les mutations économiques et sociales du marché de l'emploi à Bordeaux</p>
+      <div class="flex-row">
+        <img src="pictures/brd-without-bg.png" alt="Bordeaux métropole" class="brd-logo">
+        <img src="pictures/city_metrics_logo.png" alt="City Metrics" class="city-logo">
+      </div>
       <nav>
         <ul>
           <li><a href="#trends">Tendances actuelles</a></li>
+          <div>|</div>
           <li><a href="#jobs">Nouveaux métiers</a></li>
+          <div>|</div>
           <li><a href="#gaps">Écarts offre/demande</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
+      <div class="hero">
+        <h1>Observatoire des Transitions de l'Emploi</h1>
+        <p class="baseline">Analyser et visualiser les mutations économiques et sociales du marché de l'emploi à Bordeaux</p>
+      </div>
+      <div class="divider"></div>
       <section class="accueil">
         <div class="accueil-content">
           <div class="accueil-text">
@@ -29,7 +37,7 @@
             <a href="#trends" class="accueil-button">Découvrir</a>
           </div>
           <div class="accueil-image">
-            <img src="pictures/home-picture.webp" alt="Transition écologique et technologique de l'emploi">
+            <img src="pictures/citydata.webp" alt="Transition écologique et technologique de l'emploi">
           </div>
         </div>
       </section>
@@ -58,19 +66,23 @@
 
         </div>
 
-        <div class="slidecontainer">
+        <div class="slidecontainer flex-row margin-vertical">
           <input type="range" min="2019" max="2024" value="2024" step="1" class="slider" name="year" id="myRange" >
-          <label for="year">Année</label>
-          <p id="sliderValue">2024</p>
+          <div class="flex-row">
+            <label for="myRange">Année</label>
+            <p id="sliderValue">2024</p>
+          </div>
         </div>
 
         <div class="indicator-card custom-chart">
-          <p>Top 5</p>
-          <label class="switch">
-            <input type="checkbox" id="mySwitch">
-            <span class="switchSlider round"></span>
-          </label>
-          <p>Top 5 - 8</p>
+          <div class="flex-row gap1 margin-vertical">
+            <p>Top 5</p>
+            <label class="switch">
+              <input type="checkbox" id="mySwitch">
+              <span class="switchSlider round"></span>
+            </label>
+            <p>Top 5 - 8</p>
+          </div>
           <button class="info-button" data-modal="workTypesModal">i</button>
           <!--<h3>Évolution des Formes d'Emploi</h3>-->
           <div id="columnChartEmploys"></div>

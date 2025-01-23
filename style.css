@@ -173,3 +173,19 @@ input:checked + .switchSlider:before {
 .switchSlider.round:before {
   border-radius: 50%;
 }
+
+.flex-row {
+  display: flex;
+  gap: 0.25rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.margin-vertical {
+  margin: 2rem 0;
+}
+
+.gap1 {
+  gap: 1rem;
+}
