@@ -42,7 +42,7 @@ export function setupCharts() {
     }
   };
 
-  const skillsMatchOptions = {
+  /*const skillsMatchOptions = {
     series: [{
       name: 'Offres',
       data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
@@ -62,7 +62,7 @@ export function setupCharts() {
     xaxis: {
       categories: ['Tech', 'Santé', 'Commerce', 'Industry', 'Services', 'BTP', 'Transport', 'Education', 'Green']
     }
-  };
+  };*/
 
   const columnChartEmploysOptions = {
     series: [
@@ -133,20 +133,19 @@ export function setupCharts() {
   };
 
 
-  // Configuration des données et options pour le graphique
   const professionByRepartitionsOptions = {
     series: [
       {
         name: "CDI",
-        data: [0, 0, 600000, 0, 0] // Données pour CDI
+        data: [0, 0, 600000, 0, 0]
       },
       {
         name: "CES",
-        data: [0, 0, 0, 0, 30000] // Données pour CES
+        data: [0, 0, 0, 0, 30000]
       },
       {
         name: "NON SPECIFIE",
-        data: [5000, 10000, 0, 20000, 0] // Données pour NON SPECIFIE
+        data: [5000, 10000, 0, 20000, 0]
       }
     ],
     chart: {
@@ -202,7 +201,7 @@ export function setupCharts() {
   const professionByRepartitions = new ApexCharts(document.querySelector("#professionByRepartitions"), professionByRepartitionsOptions);
 
   const emergingJobsChart = new ApexCharts(document.querySelector("#emergingJobsChart"), emergingJobsOptions);
-  const skillsMatchChart = new ApexCharts(document.querySelector("#skillsMatchChart"), skillsMatchOptions);
+  //const skillsMatchChart = new ApexCharts(document.querySelector("#skillsMatchChart"), skillsMatchOptions);
 
   enterpriseRepartitionToulouse.render();
   enterpriseRepartitionBordeaux.render();
@@ -210,6 +209,6 @@ export function setupCharts() {
   professionByRepartitions.render();
 
   emergingJobsChart.render();
-  skillsMatchChart.render();
+  //skillsMatchChart.render();
 
 }

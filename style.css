@@ -64,6 +64,12 @@ section h2 {
     width: 80%;
     margin: auto auto 7vh;
     text-align: center;
+    ul {
+      margin: 15px auto auto;
+      text-align: start;
+      width: 60%;
+      line-height: 1.9;
+    }
   }
 }
 
@@ -77,13 +83,17 @@ section h2 {
     .jobs-content {
       width: 45%;
        h2 {
-         margin: auto auto 10vh;
+         margin: auto ;
          width: 90%;
        }
       .jobs-text {
         text-align: center;
         width: 80%;
-        margin: 5vh auto auto;
+        margin: 3vh auto auto;
+        ul {
+          line-height: 1.9;
+
+        }
       }
     }
     .half-chart {

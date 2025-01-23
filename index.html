@@ -13,9 +13,9 @@
       <p class="baseline">Analyser et visualiser les mutations économiques et sociales du marché de l'emploi à Bordeaux</p>
       <nav>
         <ul>
-          <li><a href="#trends">Tendances actuelles</a></li>
-          <li><a href="#jobs">Nouveaux métiers</a></li>
-          <li><a href="#gaps">Écarts offre/demande</a></li>
+          <li><a href="#trends">Tendances du marché</a></li>
+          <li><a href="#jobs">Répartition par types de contrats</a></li>
+          <li><a href="#gaps">Repartition des CDI</a></li>
         </ul>
       </nav>
     </header>
@@ -24,8 +24,8 @@
       <section class="accueil">
         <div class="accueil-content">
           <div class="accueil-text">
-            <h2>Comprendre l'Emploi de Demain</h2>
-            <p>85% des emplois de 2030 n'existent pas encore. Explorez avec nous les mutations du marché du travail à Bordeaux et anticipez les compétences de demain.</p>
+            <h2>Relevez les Défis des Transitions Économiques</h2>
+            <p>Le marché du travail évolue rapidement. Découvrez comment Bordeaux anticipe les métiers et compétences de demain pour relever les enjeux des transitions sociales et écologiques.</p>
             <a href="#trends" class="accueil-button">Découvrir</a>
           </div>
           <div class="accueil-image">
@@ -38,11 +38,17 @@
 
       <section id="trends">
         <h2>Les tendances du marché de l'emploi</h2>
-        <p class="section-intro">
-          Le marché du travail connaît des transformations majeures avec l'essor de l'auto-entrepreneuriat, 
-          du télétravail et des plateformes numériques. Notre observatoire analyse ces évolutions pour 
-          anticiper les besoins futurs.
-        </p>
+        <div class="section-intro">
+          Cet indicateur met en lumière la répartition de l'emploi par secteurs d'activité dans deux métropoles voisines, Bordeaux et Toulouse, qui présentent des caractéristiques comparables :
+          <ul>
+            <li><b> Proximité géographique :</b>Ces deux métropoles du Sud-Ouest sont situées dans une même région économique et partagent des enjeux similaires.</li>
+            <li><b>Taille de la population :</b>Les deux villes ont une population et une densité proches, ce qui facilite les comparaisons et l’identification des spécificités locales.</li>
+            <li><b>Taille économique : </b>          Bordeaux et Toulouse possèdent une taille économique relativement équivalente, mais avec des secteurs d’activité phares différents (par exemple, aéronautique à Toulouse, viticulture à Bordeaux).
+            </li>
+          </ul>
+
+
+        </div>
         <div class="indicators-grid">
           <div class="indicator-card">
             <button class="info-button" data-modal="workTypesModal">i</button>
@@ -60,7 +66,6 @@
 
         <div class="indicator-card custom-chart">
           <button class="info-button" data-modal="workTypesModal">i</button>
-          <!--<h3>Évolution des Formes d'Emploi</h3>-->
           <div id="columnChartEmploys"></div>
         </div>
 
@@ -76,31 +81,38 @@
       <section id="jobs">
         <div class="indicators-grid half-chart">
           <div class="indicator-card">
-            <button class="info-button" data-modal="jobsModal">i</button>
             <div id="professionByRepartitions"></div>
           </div>
         </div>
 
         <div class="jobs-content">
           <h2>Répartition des types de contrats par profession</h2>
-          <p class="jobs-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
+          <div class="jobs-text">
+            <ul>
+              <li> <b>La répartition des types de contrats</b> (CDI, CDD, CES, non spécifiés) permet de mettre en lumière les secteurs où la précarité de l’emploi est prédominante. Ces informations sont essentielles pour orienter les politiques publiques et soutenir les travailleurs vulnérables.
+              </li>
+              <li> <b>Analyser les disparités socio-économiques :</b>
+                Cet indicateur contribue à détecter d’éventuelles inégalités, notamment entre les sexes, en fonction des types de contrats et des secteurs. Cela offre une base solide pour promouvoir une égalité accrue dans le monde professionnel.
+              </li>
+              <li>
+                <b>Anticiper les besoins de transition :</b>
+                Les données sur les contrats permettent également d’anticiper les besoins en formation et en accompagnement des salariés dans des secteurs fragiles ou en tension, pour favoriser leur résilience face aux mutations économiques.          </p>
+              </li>
+            </ul>
+         </div>
         </div>
       </section>
 
       <div class="divider"></div>
 
       <section id="gaps">
-        <h2>Adéquation entre offre et demande d'emploi</h2>
-        <div class="indicator-card full-width">
+        <h2>Repartition des CDI</h2>
+        <!--<div class="indicator-card full-width">
           <h3>Analyse des Écarts par Secteur</h3>
           <div id="skillsMatchChart"></div>
-        </div>
+        </div>-->
 
         <div class="local-initiatives">
-          <h3>Initiatives Locales</h3>
-          <div class="divider"></div>
             <div class="map-acordion">
               <div class="map-frame-wrapper">
                 <iframe src="https://statistiques.pole-emploi.org/bmo/geo?embed=1&fa=75&fb=33&gc=7532&le=0&nc=0&pp=2024&ss=1" class="map-frame"></iframe>
@@ -108,14 +120,28 @@
               <div class="initiative-card accordion">
                 <button class="accordion-header">
                   <img src="pictures/accompagnement-removebg-preview.png" alt="Bordeaux métropole">
-                  Accompagnement</button>
+                  Top 5 communes avec le plus de CDI en 2021</button>
                 <div class="accordion-content">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
+                   <img class="accordion-image" src="pictures/carte.png" alt="Bordeaux métropole">
                 </div>
               </div>
             </div>
+
+          <p>
+            Cet indicateur analyse la répartition géographique des types de contrats (CDI et CDD) en Gironde, en croisant les données par sexe et par commune.
+          </p>
+          <ul>
+            <li>
+              <b>Concentration dans l'hypercentre :</b> Met en évidence les zones à forte attractivité économique et celles nécessitant un soutien accru.
+            </li>
+            <li>
+              <b>Disparités hommes-femmes :</b> Permet de détecter les écarts dans l'accès aux emplois stables ou précaires.
+            </li>
+            <li>
+              <b>Précarité de l'emploi :</b> Identifie les zones dominées par des contrats précaires pour orienter les politiques publiques et les dispositifs d'accompagnement.
+            </li>
+          </ul>
+
         </div>
       </section>
     <footer>
