@@ -3,14 +3,11 @@ export function setupCharts() {
   let toulouseSeries = [0,0,0,0,0,0];
   let bordeauxSeries = [0,0,0,0,0,0];
 
-  updateChart('2024');
-
   const myRange = document.getElementById("myRange");
   myRange.addEventListener("input", function() {
     const selectedYear = this.value;
     updateSliderValue(selectedYear);
     updateChart(selectedYear);
-    console.log(selectedYear);
   });
 
   function updateSliderValue(value) {
@@ -24,42 +21,40 @@ export function setupCharts() {
         bordeauxSeries = [34334, 23893, 19054, 9452, 5050, 13426];
         break;
       case '2023':
-        toulouseSeries = [20, 20, 20, 20, 20, 20];
-        bordeauxSeries = [10, 10, 10, 10, 10, 10];
+        toulouseSeries = [32648,25176,19452,9854,5045,12326];
+        bordeauxSeries = [35030,24417,19584,9718,5081,13571];
         break;
       case '2022':
-        toulouseSeries = [30, 30, 30, 30, 30, 30];
-        bordeauxSeries = [30, 30, 30, 30, 30, 30];
+        toulouseSeries = [33030,25295,19559,9992,5038,12391];
+        bordeauxSeries = [35429,24531,19939,9900,5143,13786];
         break;
       case '2021':
-        toulouseSeries = [40, 40, 40, 40, 40, 40];
-        bordeauxSeries = [40, 40, 40, 40, 40, 40];
+        toulouseSeries = [33731,25857,20049,10220,5121,12603];
+        bordeauxSeries = [35900,24870,20493,10123,5151,14004];
         break;
       case '2020':
-        toulouseSeries = [50, 50, 50, 50, 50, 50];
-        bordeauxSeries = [50, 50, 50, 50, 50, 50];
+        toulouseSeries = [34571,26377,20682,10385,5220,12984];
+        bordeauxSeries = [36330,25438,21199,10265,5199,14249];
         break;
       default:
-        toulouseSeries = [32001, 0, 18865, 9568, 4967, 12206];
-        bordeauxSeries = [34334, 23893, 19054, 9452, 5050, 13426];
+        toulouseSeries = [37213,27400,21440,10549,5343,13252];
+        bordeauxSeries = [36844,25984,21916,10541,5258,14523];
         break
     }
-    console.log(toulouseSeries);
-    enterpriseRepartitionToulouse.updateSeries([{
-      name:'toulooouse',
-      series: toulouseSeries}]);
+    enterpriseRepartitionToulouse.updateSeries(toulouseSeries);
+    enterpriseRepartitionBordeaux.updateSeries(bordeauxSeries);
   }
 
   const enterpriseRepartitionToulouseOptions = {
     name: 'toulooouse',
-    series: toulouseSeries,
+    series: [32001, 24595, 18865, 9568, 4967, 12206],
     chart: {
       type: 'pie',
       height: 350
     },
     labels: ['BTP IMMOBILIER', 'ACTIVITES DE SERVICE', 'COMMERCES ET SERVICES AUX PARTICULIERS', 'SANTE, SOCIAL', 'CULTURES LOISIRS', 'AUTRES'],
     title: {
-      text: 'Toulouse Metropole, 2024',
+      text: 'Toulouse Metropole',
       align: 'left'
     }
   };
@@ -82,14 +77,14 @@ export function setupCharts() {
   };
 
   const enterpriseRepartitionBordeauxOptions = {
-    series: bordeauxSeries,
+    series: [34334, 23893, 19054, 9452, 5050, 13426],
     chart: {
       type: 'pie',
       height: 350
     },
     labels: ['BTP IMMOBILIER', 'ACTIVITES DE SERVICE', 'COMMERCES ET SERVICES AUX PARTICULIERS', 'SANTE, SOCIAL', 'CULTURES LOISIRS', 'AUTRES'],
     title: {
-      text: 'Bordeaux Metropole, 2024',
+      text: 'Bordeaux Metropole',
       align: 'left'
     }
   };
