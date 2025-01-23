@@ -1,6 +1,58 @@
 export function setupCharts() {
+
+  let toulouseSeries = [0,0,0,0,0,0];
+  let bordeauxSeries = [0,0,0,0,0,0];
+
+  updateChart('2024');
+
+  const myRange = document.getElementById("myRange");
+  myRange.addEventListener("input", function() {
+    const selectedYear = this.value;
+    updateSliderValue(selectedYear);
+    updateChart(selectedYear);
+    console.log(selectedYear);
+  });
+
+  function updateSliderValue(value) {
+    document.getElementById("sliderValue").textContent = value;
+  }
+
+  function updateChart(selectedYear) {
+    switch (selectedYear) {
+      case '2024':
+        toulouseSeries = [32001, 24595, 18865, 9568, 4967, 12206];
+        bordeauxSeries = [34334, 23893, 19054, 9452, 5050, 13426];
+        break;
+      case '2023':
+        toulouseSeries = [20, 20, 20, 20, 20, 20];
+        bordeauxSeries = [10, 10, 10, 10, 10, 10];
+        break;
+      case '2022':
+        toulouseSeries = [30, 30, 30, 30, 30, 30];
+        bordeauxSeries = [30, 30, 30, 30, 30, 30];
+        break;
+      case '2021':
+        toulouseSeries = [40, 40, 40, 40, 40, 40];
+        bordeauxSeries = [40, 40, 40, 40, 40, 40];
+        break;
+      case '2020':
+        toulouseSeries = [50, 50, 50, 50, 50, 50];
+        bordeauxSeries = [50, 50, 50, 50, 50, 50];
+        break;
+      default:
+        toulouseSeries = [32001, 0, 18865, 9568, 4967, 12206];
+        bordeauxSeries = [34334, 23893, 19054, 9452, 5050, 13426];
+        break
+    }
+    console.log(toulouseSeries);
+    enterpriseRepartitionToulouse.updateSeries([{
+      name:'toulooouse',
+      series: toulouseSeries}]);
+  }
+
   const enterpriseRepartitionToulouseOptions = {
-    series: [32001, 24595, 18865, 9568, 4967, 12206],
+    name: 'toulooouse',
+    series: toulouseSeries,
     chart: {
       type: 'pie',
       height: 350
@@ -30,7 +82,7 @@ export function setupCharts() {
   };
 
   const enterpriseRepartitionBordeauxOptions = {
-    series: [34334, 23893, 19054, 9452, 5050, 13426],
+    series: bordeauxSeries,
     chart: {
       type: 'pie',
       height: 350

@@ -58,6 +58,12 @@
 
         </div>
 
+        <div class="slidecontainer">
+          <input type="range" min="2019" max="2024" value="2024" step="1" class="slider" name="year" id="myRange" oninput="updateSliderValue(this.value)">
+          <label for="year">Année</label>
+          <p id="sliderValue">2024</p>
+        </div>
+        
         <div class="indicator-card custom-chart">
           <button class="info-button" data-modal="workTypesModal">i</button>
           <!--<h3>Évolution des Formes d'Emploi</h3>-->
